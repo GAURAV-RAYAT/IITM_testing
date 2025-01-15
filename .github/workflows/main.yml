@@ -1,0 +1,25 @@
+name: Example GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Run a Task by 23f1001633@ds.study.iitm.ac.in
+        run: echo "This is a step with my email 23f1001633@ds.study.iitm.ac.in"
+
+      - name: Finish Action
+        run: echo "Workflow has completed!"
